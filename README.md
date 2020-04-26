@@ -9,9 +9,9 @@ Zestaw projektów na zaliczenie przedmiotu Programowanie Urządzeń Mobilnych.
 - Uwagi: -
 
 Zadania:
-  1. Latarka
-  2. Zgadnij moją liczbę
-  3. Funkcje kwadratowe
+  - [x] Latarka
+  - [x] Zgadnij moją liczbę
+  - [x] Funkcje kwadratowe
   
 # 2. Podstawowe elementy GUI
 
@@ -20,12 +20,12 @@ Zadania:
 - Uwagi: -
 
 Zadania:
-  1. Światła drogowe
-  2. Kółko krzyżyk
-  3. Quiz
-  4. Zamawianie pizzy
-  5. Skróty nazw krajów
-  6. Skróty nazw krajów (tablice xml)
+  - [x] Światła drogowe
+  - [x] Kółko krzyżyk
+  - [ ] Quiz
+  - [ ] Zamawianie pizzy
+  - [ ] Skróty nazw krajów
+  - [ ] Skróty nazw krajów (tablice xml)
 
 # 3. Pliki, zdjęcia i mechanizm TTS
 
@@ -34,8 +34,8 @@ Zadania:
 - Uwagi: -
 
 Zadania:
-  1. Galeria zdjęć
-  2. Text-to-Speech
+  - [ ] Galeria zdjęć
+  - [ ] Text-to-Speech
 
 # 4. Wykorzystanie WebView
 
@@ -44,9 +44,9 @@ Zadania:
 - Uwagi: -
 
 Zadania:
-  1. Gra "Znajdź pary"
-  2. Ciekawe miejsce
-  3. Książka adresowa
+  - [ ] Gra "Znajdź pary"
+  - [ ] Ciekawe miejsce
+  - [ ] Książka adresowa
 
 # 5. Dialogi i mechanizm intencji
 
@@ -55,8 +55,8 @@ Zadania:
 - Uwagi: -
 
 Zadania:
-  1. Nauka języka angielskiego
-  2. Notatki
+  - [ ] Nauka języka angielskiego
+  - [ ] Notatki
 
 # 6. Projekt zaliczeniowy
 
@@ -71,18 +71,18 @@ zarządzaniem i planowaniem zadań do zrobienia w określonym czasie. Aplikacja 
 efektywne zarządzanie czynnościami i dostępnymi terminami czasowymi do ich realizacji.
 
 Funkcjonalności jakie powinna implementować aplikacja są następujące:
-  - wyświetlenie listy zadań,
-  - dodanie zadania na listę,
-  - edycję zadania z listy,
-  - usuwanie zadania z listy,
-  - oznaczenie zadania jako zrobione,
-  - generowanie przypomnienia o zadaniach do zrobienia na dzisiaj, lub których termin minął,
-  - eksport listy zadań do pliku tekstowego,
-  - nadanie zadaniom priorytetu,
-  - sortowanie zadań (np. po dacie dodania, terminie zakończenia zadania, priorytecie, nazwie zadania, statusie),
-  - dodawanie załączników do zadania – zdjęć i plików wideo (np. przechwyconych z aparatu urządzenia),
-  - usunięcie załączników z zadania,
-  - wyświetlenie listy załączników przypisanych do zadania.
+  - [ ] wyświetlenie listy zadań,
+  - [ ] dodanie zadania na listę,
+  - [ ] edycję zadania z listy,
+  - [ ] usuwanie zadania z listy,
+  - [ ] oznaczenie zadania jako zrobione,
+  - [ ] generowanie przypomnienia o zadaniach do zrobienia na dzisiaj, lub których termin minął,
+  - [ ] eksport listy zadań do pliku tekstowego,
+  - [ ] nadanie zadaniom priorytetu,
+  - [ ] sortowanie zadań (np. po dacie dodania, terminie zakończenia zadania, priorytecie, nazwie zadania, statusie),
+  - [ ] dodawanie załączników do zadania – zdjęć i plików wideo (np. przechwyconych z aparatu urządzenia),
+  - [ ] usunięcie załączników z zadania,
+  - [ ] wyświetlenie listy załączników przypisanych do zadania.
   
 Ocenie podlega:
 
