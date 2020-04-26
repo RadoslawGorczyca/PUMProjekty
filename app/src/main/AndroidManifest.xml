@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.gorczyca.pum">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="LockedOrientationActivity">
+        <!-- TODO Ustaw wszystkie aktywności na PortraitMode -->
+        <activity
+            android:name=".menu.MenuMainPageActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".menu.MenuProject1Activity"
+            android:parentActivityName=".menu.MenuMainPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project1.FlashlightActivity"
+            android:parentActivityName=".menu.MenuProject1Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".project1.GuessMyNumberActivity"
+            android:parentActivityName=".menu.MenuProject1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project1.QuadraticFunctionsActivity"
+            android:parentActivityName=".menu.MenuProject1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu.MenuProject2Activity"
+            android:parentActivityName=".menu.MenuMainPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project2.TrafficLightsActivity"
+            android:parentActivityName=".menu.MenuProject2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project2.CountriesActivity"
+            android:parentActivityName=".menu.MenuProject2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project2.PizzaActivity"
+            android:parentActivityName=".menu.MenuProject2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project2.QuizActivity"
+            android:parentActivityName=".menu.MenuProject2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project2.TicTacToeActivity"
+            android:parentActivityName=".menu.MenuProject2Activity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

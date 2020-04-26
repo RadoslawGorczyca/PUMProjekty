@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp"
+        tools:context=".project1.QuadraticFunctionsActivity">
+
+        <TextView
+            android:id="@+id/text_instructions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/quadratic_functions_instructions"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_pattern"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:text="@string/quadratic_function_pattern"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_instructions" />
+
+
+        <TextView
+            android:id="@+id/text_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:text="a = "
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@id/input_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_pattern" />
+
+        <EditText
+            android:id="@+id/input_a"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:ems="5"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionNext"
+            android:inputType="numberSigned|numberDecimal"
+            android:lines="1"
+            android:maxLength="5"
+            android:hint="@string/insert_a"
+            app:layout_constraintBottom_toBottomOf="@id/text_a"
+            app:layout_constraintStart_toEndOf="@id/text_a"
+            app:layout_constraintTop_toTopOf="@id/text_a" />
+
+        <TextView
+            android:id="@+id/text_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:text="b = "
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@id/input_b"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_a" />
+
+        <EditText
+            android:id="@+id/input_b"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionNext"
+            android:inputType="numberSigned|numberDecimal"
+            android:lines="1"
+            android:maxLength="5"
+            android:hint="@string/insert_b"
+            app:layout_constraintBottom_toBottomOf="@id/text_b"
+            app:layout_constraintEnd_toEndOf="@id/input_a"
+            app:layout_constraintStart_toStartOf="@id/input_a"
+            app:layout_constraintTop_toTopOf="@id/text_b" />
+
+        <TextView
+            android:id="@+id/text_c"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:lines="1"
+            android:text="c = "
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toStartOf="@id/input_c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_b" />
+
+        <EditText
+            android:id="@+id/input_c"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="5"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionSend"
+            android:inputType="numberSigned|numberDecimal"
+            android:lines="1"
+            android:maxLength="5"
+            android:hint="@string/insert_c"
+            app:layout_constraintBottom_toBottomOf="@id/text_c"
+            app:layout_constraintEnd_toEndOf="@id/input_b"
+            app:layout_constraintStart_toStartOf="@id/input_b"
+            app:layout_constraintTop_toTopOf="@id/text_c" />
+
+        <Button
+            android:id="@+id/button_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/input_a"
+            app:layout_constraintBottom_toBottomOf="@id/input_c"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/count"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toEndOf="@id/input_b"/>
+
+        <TextView
+            android:id="@+id/text_results"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:gravity="center_horizontal"
+            android:text="@string/results"
+            android:textSize="24sp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold|italic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_c" />
+
+        <TextView
+            android:id="@+id/text_function"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/quadratic_function"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_results" />
+
+        <TextView
+            android:id="@+id/text_not_quadratic_function"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/not_quadratic_function"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_function" />
+
+        <TextView
+            android:id="@+id/delta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/delta"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_not_quadratic_function" />
+
+        <TextView
+            android:id="@+id/text_zero_points"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/zero_points"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/delta" />
+
+        <TextView
+            android:id="@+id/text_no_zero_points"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/no_zero_points"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_zero_points" />
+
+        <TextView
+            android:id="@+id/text_x0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/x0"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_no_zero_points" />
+
+        <TextView
+            android:id="@+id/text_x1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/x1"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_x0" />
+
+        <TextView
+            android:id="@+id/text_x2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/x2"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_x1" />
+
+        <TextView
+            android:id="@+id/text_peak"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/peak"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_x2" />
+
+        <TextView
+            android:id="@+id/text_p"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/p"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_peak" />
+
+        <TextView
+            android:id="@+id/text_q"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/q"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_p" />
+
+        <TextView
+            android:id="@+id/text_peak_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/w"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_q" />
+
+        <TextView
+            android:id="@+id/text_y_cross"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/y_cross_point"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_peak_point" />
+
+        <TextView
+            android:id="@+id/text_y_cross_point"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/f0"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_y_cross" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

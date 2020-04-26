@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">PUM - Projekty</string>
+    <string name="project_label">Wprowadzenie do platformy Android</string>
+    <string name="project_label2">Zestaw zadań</string>
+    <string name="author">Radosław Gorczyca</string>
+    <string name="flashlight">Latarka</string>
+    <string name="guess_my_number">Zgadnij moją liczbę</string>
+    <string name="quadratic_functions">Funkcje kwadratowe</string>
+    <string name="white">Biały</string>
+    <string name="red">Czerwony</string>
+    <string name="green">Zielony</string>
+    <string name="blue">Niebieski</string>
+    <string name="permission_denied_write_settings">Odmówiono dostępu do zmiany ustawień systemu.</string>
+    <string name="guess_my_number_welcome_string">Witaj w grze \"Zgadnij moją liczbę\"!\nTwoim zadaniem jest odgadnięcie wylosowanej przeze mnie liczby z zakresu: -2000 do 2000. Swój traf wpisuj w polu tekstowym poniżej, a ja będę Cię informować, czy prawidłowa liczba jest większa czy mniejsza. Powodzenia!</string>
+    <string name="here_write_your_guess">Wpisz tu swoją liczbę…</string>
+    <string name="bigger">Więcej!</string>
+    <string name="smaller">Mniej!</string>
+    <string name="congratulations_the_correct_number_was">Brawo! Prawidłowa liczba to %1$d!</string>
+    <string name="draw_new_number">Wylosować nową liczbę?</string>
+    <string name="draw">Losuj</string>
+    <string name="number_of_tries">Próby: %1$d</string>
+    <string name="number_of_points">Punkty: %1$d</string>
+    <string name="error_insert_correct_number">Wprowadź prawidłową liczbę!</string>
+    <string name="pum_introduction">PUM - Wprowadzenie</string>
+    <string name="project_introduction">Projekty zaliczeniowe dla przedmiotu PUM</string>
+    <string name="project_group">Informatyka II stopnia, niestacjonarne, rok I semestr II, ISI gr. 1</string>
+    <string name="introduction_to_android">Wprowadzenie do platformy Android</string>
+    <string name="project_GUI">Podstawowe elementy GUI</string>
+    <string name="project_files_photos_and_TTS">Pliki, zdjęcia i mechanizm TTS</string>
+    <string name="project_web_view">Wykorzystanie WebView</string>
+    <string name="project_dialogs_and_intents">Dialogi i mechanizm intencji</string>
+    <string name="project_end">Projekt zaliczeniowy</string>
+    <string name="quadratic_functions_instructions">Aplikacja służy do obliczania własności funkcji kwadratowej. Wpisz w odpowiednie pola wartości całkowite a, b i c, następnie dotknij przycisk OBLICZ.</string>
+    <string name="quadratic_function_pattern">f(x) = ax^2+bx+c</string>
+    <string name="quadratic_function">f(x) = %1$.0fx^2+(%2$.0f)x+(%3$.0f)</string>
+    <string name="count">Oblicz</string>
+    <string name="results">Wyniki:</string>
+    <string name="delta">Δ = b^2–4ac = (%2$.0f)^2–4*(%1$.0f)*(%3$.0f) = %4$.0f</string>
+    <string name="zero_points">Miejsca zerowe:</string>
+    <string name="no_zero_points">Brak miejsc zerowych.</string>
+    <string name="x0">x0 = (-b)/(2a) = (-(%2$.0f))/(2*(%1$.0f)) = %3$.2f</string>
+    <string name="x1">x1 = (-b+sqrt(Δ))/(2a) = (-(%2$.0f)-sqrt(Δ))/(2*(%1$.0f)) = %3$.2f</string>
+    <string name="x2">x2 = (-b-sqrt(Δ))/(2a) = (-(%2$.0f)+sqrt(Δ))/(2*(%1$.0f)) = %3$.2f</string>
+    <string name="peak">Współrzędne wierzchołka paraboli:</string>
+    <string name="p">p = -b/2a = -(%2$.0f)/2*(%1$.0f) = %3$.2f</string>
+    <string name="q">q = -Δ/4a = -(%2$.0f)/4*(%1$.0f) = %3$.2f</string>
+    <string name="w">W = (%1$.2f, %2$.2f)</string>
+    <string name="y_cross_point">Punkt przecięcia z osią Y:</string>
+    <string name="f0">f(0) = (0, %1$.0f)</string>
+    <string name="insert_a">Wpisz a…</string>
+    <string name="insert_b">Wpisz b…</string>
+    <string name="insert_c">Wpisz c…</string>
+    <string name="not_quadratic_function">Podana funkcja nie jest funkcją kwadratową!</string>
+    <string name="traffic_lights">Światła drogowe</string>
+    <string name="tic_tac_toe">Kółko krzyżyk</string>
+    <string name="quiz">Quiz</string>
+    <string name="ordering_pizza">Zamawianie pizzy</string>
+    <string name="countries_shorts">Skróty nazw krajów</string>
+    <string name="countries_shorts_xml_arrays">Skróty nazw krajów (tablice xml)</string>
+    <string name="red_light">Czerwone</string>
+    <string name="yellow_light">Żółte</string>
+    <string name="green_light">Zielone</string>
+    <string name="circles_wins">Kółko wygrywa!</string>
+    <string name="crosses_wins">Krzyżyk wygrywa!</string>
+    <string name="play_again">Zagraj ponownie</string>
+    <string name="tied_game">Remis!</string>
+
+</resources>
