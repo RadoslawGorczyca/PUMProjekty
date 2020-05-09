@@ -122,5 +122,28 @@
     <string name="pizza_price_will_be">"Cena pizzy to "</string>
     <string name="pln">" zł."</string>
     <string name="order_info">Zamówienie</string>
+    <string name="shortcuts_conversion">Konwersja skrótów</string>
+
+    <string-array name="countries_array">
+        <item>Polska</item>
+        <item>Anglia</item>
+        <item>Niemcy</item>
+        <item>Francja</item>
+        <item>Austria</item>
+        <item>Chorwacja</item>
+        <item>Ukraina</item>
+        <item>Węgry</item>
+    </string-array>
+
+    <string-array name="shortcuts_array">
+        <item>PL</item>
+        <item>EN</item>
+        <item>DE</item>
+        <item>FR</item>
+        <item>A</item>
+        <item>HR</item>
+        <item>UA</item>
+        <item>H</item>
+    </string-array>
 
 </resources>
