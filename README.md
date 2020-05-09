@@ -23,9 +23,9 @@ Zadania:
   - [x] Światła drogowe
   - [x] Kółko krzyżyk
   - [x] Quiz
-  - [ ] Zamawianie pizzy
-  - [ ] Skróty nazw krajów
-  - [ ] Skróty nazw krajów (tablice xml)
+  - [x] Zamawianie pizzy
+  - [x] Skróty nazw krajów
+  - [x] Skróty nazw krajów (tablice xml)
 
 # 3. Pliki, zdjęcia i mechanizm TTS
 
