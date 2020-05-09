@@ -64,5 +64,10 @@
     <string name="crosses_wins">Krzyżyk wygrywa!</string>
     <string name="play_again">Zagraj ponownie</string>
     <string name="tied_game">Remis!</string>
+    <string name="question_number">Pytanie %1$d/%2$d</string>
+    <string name="points_number">Punkty: %1$d</string>
+    <string name="what_item_you_see_on_the_picture">Jaki przedmiot widzisz na zdjęciu?</string>
+    <string name="quiz_archery">Quiz - Łucznictwo</string>
+    <string name="quiz_end_text">Świetny wynik! Dzięki za udział w quizie! :)</string>
 
 </resources>

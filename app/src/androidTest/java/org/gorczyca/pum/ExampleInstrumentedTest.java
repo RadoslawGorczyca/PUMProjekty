@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("org.gorczyca.pum_wprowadzenie", appContext.getPackageName());
+        assertEquals("org.gorczyca.pum", appContext.getPackageName());
     }
 }
