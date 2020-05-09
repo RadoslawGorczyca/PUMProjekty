@@ -15,7 +15,7 @@ Zadania:
   
 # 2. Podstawowe elementy GUI
 
-- Status: W przygotowaniu
+- Status: Wysłane
 - Ocena: -
 - Uwagi: -
 
