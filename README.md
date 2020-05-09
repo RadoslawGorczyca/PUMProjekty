@@ -22,7 +22,7 @@ Zadania:
 Zadania:
   - [x] Światła drogowe
   - [x] Kółko krzyżyk
-  - [ ] Quiz
+  - [x] Quiz
   - [ ] Zamawianie pizzy
   - [ ] Skróty nazw krajów
   - [ ] Skróty nazw krajów (tablice xml)
