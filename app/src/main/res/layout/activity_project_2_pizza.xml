@@ -1,9 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".project2.PizzaActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:text="@string/pie_thickness"
+        android:textColor="@android:color/white"
+        android:padding="4dp"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_pie_thickness"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_pie_thick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/thick"/>
+
+            <RadioButton
+                android:id="@+id/radio_pie_thin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thin"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/pie_size"
+            android:textColor="@android:color/white"
+            android:padding="4dp"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_pie_size"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radio_pie_small"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/small"/>
+
+            <RadioButton
+                android:id="@+id/radio_pie_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medium"/>
+
+            <RadioButton
+                android:id="@+id/radio_pie_big"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/big"/>
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/basic_ingredients_min_3"
+            android:textColor="@android:color/white"
+            android:padding="4dp"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_ham"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/ham"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_cheese"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/cheese"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_mushrooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/mushrooms"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_olives"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/olives"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_bacon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/bacon"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_chicken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/chicken"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_onion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/onion"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:text="@string/optional_ingredients_max_2"
+            android:textColor="@android:color/white"
+            android:padding="4dp"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_garlic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/garlic"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_salami"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/salami"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_shrimps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/shrimps"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_capers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/capers"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_tuna"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/tuna"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_tomato_sauce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/tomato_sauce"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_garlic_sauce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/garlic_sauce"/>
+
+        <CheckBox
+            android:id="@+id/ingredient_oregano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/oregano"/>
+
+        <Button
+            android:id="@+id/button_order"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/order"
+            android:layout_margin="24dp"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>
