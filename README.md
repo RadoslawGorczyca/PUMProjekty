@@ -29,7 +29,7 @@ Zadania:
 
 # 3. Pliki, zdjęcia i mechanizm TTS
 
-- Status: Nie zaczęte
+- Status: W przygotowaniu
 - Ocena: -
 - Uwagi: -
 
