@@ -89,7 +89,7 @@ public class GuessMyNumberActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v) {
         if (v.getId() == buttonGuess.getId()) {
-            if (checkIfInputCorrect(inputNumber)) {
+            if (checkIfInputCorrect(inputNumber.getText().toString())) {
                 int guessedNumber = getInputNumber(inputNumber);
                 checkGuessedNumber(guessedNumber, correctNumber);
                 incrementNumberOfTries();
@@ -101,8 +101,7 @@ public class GuessMyNumberActivity extends AppCompatActivity implements View.OnC
         }
     }
 
-    private boolean checkIfInputCorrect(EditText inputNumber) {
-        String input = inputNumber.getText().toString();
+    public boolean checkIfInputCorrect(String input) {
         if (input.isEmpty()) {
             return false;
         }
@@ -110,6 +109,7 @@ public class GuessMyNumberActivity extends AppCompatActivity implements View.OnC
         Pattern p = Pattern.compile(regex);
         Matcher m = p.matcher(input);
         return m.find() && m.group().equals(input);
+
     }
 
     private int getInputNumber(EditText inputNumber) {

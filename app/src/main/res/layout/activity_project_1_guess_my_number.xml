@@ -86,7 +86,6 @@
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
         android:textStyle="italic"
-        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_number" />
@@ -101,7 +100,6 @@
         android:textColor="@android:color/holo_green_dark"
         android:textSize="24sp"
         android:textStyle="italic"
-        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/input_number" />
@@ -116,7 +114,6 @@
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
         android:textStyle="italic"
-        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_end" />
@@ -128,7 +125,6 @@
         android:backgroundTint="@color/colorAccent"
         android:text="@string/draw"
         android:textColor="@android:color/white"
-        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_play_again" />
