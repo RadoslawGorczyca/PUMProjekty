@@ -123,6 +123,8 @@
     <string name="pln">" zł."</string>
     <string name="order_info">Zamówienie</string>
     <string name="shortcuts_conversion">Konwersja skrótów</string>
+    <string name="gallery">Galeria</string>
+    <string name="text_to_speech">Text-To-Speech</string>
 
     <string-array name="countries_array">
         <item>Polska</item>

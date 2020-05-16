@@ -62,6 +62,18 @@
             android:name=".project2.TicTacToeActivity"
             android:parentActivityName=".menu.MenuProject2Activity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu.MenuProject3Activity"
+            android:parentActivityName=".menu.MenuMainPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project3.TextToSpeechActivity"
+            android:parentActivityName=".menu.MenuProject3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project3.GalleryActivity"
+            android:parentActivityName=".menu.MenuProject3Activity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
