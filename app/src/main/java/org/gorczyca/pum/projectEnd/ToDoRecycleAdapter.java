@@ -98,7 +98,10 @@ public class ToDoRecycleAdapter extends RecyclerView.Adapter<ToDoRecycleAdapter.
                                     .setTitle(R.string.delete)
                                     .setMessage(R.string.are_you_sure)
                                     .setPositiveButton(R.string.yes, (dialog, which) -> {
-                                        ToDoMainActivity.toDoItemsViewModel.delete(toDoItem);
+                                        //ToDoMainActivity.toDoItemsViewModel.delete(toDoItem);
+                                        ToDoItemDao toDoItemDao = ToDoItemsDatabase.getDatabase(context).toDoItemDao();
+                                        toDoItemDao.delete(toDoItem);
+                                        toDoItems.remove(toDoItem);
                                         notifyDataSetChanged();
                                     })
                                     .setNegativeButton(R.string.cancel, null)
