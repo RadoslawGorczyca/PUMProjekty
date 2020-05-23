@@ -123,6 +123,32 @@
     <string name="pln">" zł."</string>
     <string name="order_info">Zamówienie</string>
     <string name="shortcuts_conversion">Konwersja skrótów</string>
+    <string name="to_do_list">Lista \"To Do\"</string>
+    <string name="add_to_do_item">Dodaj nowe zadanie</string>
+    <string name="save">Zapisz</string>
+    <string name="cancel">Anuluj</string>
+    <string name="name_to_do_task">Nazwij zadanie...</string>
+    <string name="no_items">Brak zadań</string>
+    <string name="error_fields_cannot_be_empty">Pole nie może być puste</string>
+    <string name="to_do_item_details">Szczegóły zadania</string>
+    <string name="is_done">Zakończone: %1$s</string>
+    <string name="name">Nazwa: %1$s</string>
+    <string name="edit">Edytuj</string>
+    <string name="delete">Usuń</string>
+    <string name="details">Szczegóły</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+    <string name="are_you_sure">Na pewno?</string>
+    <string name="edit_to_do_item">Edytuj zadanie</string>
+    <string name="high_priority">Wysoki priorytet:</string>
+    <string name="save_to_file">Zapisz do pliku</string>
+    <string name="due_date">Termin:</string>
+    <string name="channel_name">Lista zadań</string>
+    <string name="create_date">Data utworzenia</string>
+    <string name="end_date">Data zakończenia</string>
+    <string name="priority">Priorytet</string>
+    <string name="sort_name">Nazwa</string>
+    <string name="status">Status</string>
 
     <string-array name="countries_array">
         <item>Polska</item>

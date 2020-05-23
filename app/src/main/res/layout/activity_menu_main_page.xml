@@ -107,13 +107,12 @@
             android:text="@string/project_dialogs_and_intents"
             android:textColor="@android:color/white" />
 
-        <!--TODO Odblokuj projekt zaliczeniowy po ukończeniu-->
         <Button
             android:id="@+id/button_project_end"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1.5"
-            android:enabled="false"
+            android:backgroundTint="@color/colorAccent"
             android:text="@string/project_end"
             android:textColor="@android:color/white" />
 

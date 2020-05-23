@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_sort_by_create_date"
+        android:title="@string/create_date"/>
+
+    <item
+        android:id="@+id/action_sort_by_end_date"
+        android:title="@string/end_date"/>
+
+    <item
+        android:id="@+id/action_sort_by_priority"
+        android:title="@string/priority"/>
+
+    <item
+        android:id="@+id/action_sort_by_name"
+        android:title="@string/sort_name"/>
+    <item
+        android:id="@+id/action_sort_by_status"
+        android:title="@string/status"/>
+
+
+</menu>

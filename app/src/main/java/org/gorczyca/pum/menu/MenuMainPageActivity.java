@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import org.gorczyca.pum.R;
+import org.gorczyca.pum.projectEnd.ToDoMainActivity;
 
 public class MenuMainPageActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -57,7 +58,7 @@ public class MenuMainPageActivity extends AppCompatActivity implements View.OnCl
         } else if (v.getId() == buttonProjectDialogsIntentions.getId()) {
             //TODO Podepnij OnClick po ukonczeniu projektu 5
         } else if (v.getId() == buttonProjectEnd.getId()) {
-            //TODO Podepnij OnClick po ukonczeniu projektu zaliczeniowego
+            startActivity(new Intent(MenuMainPageActivity.this, ToDoMainActivity.class));
         }
     }
 }
