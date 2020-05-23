@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,12 +15,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.gorczyca.pum.R;
 import org.gorczyca.pum.utils.Constants;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+
 public class ToDoItemDetailsActivity extends AppCompatActivity {
 
-    private TextView textIsDone;
-    private TextView textName;
     private String toDoItemId;
     private ToDoItem toDoItem;
+
+    private TextView textName;
+    private TextView textIsDone;
+    private TextView textIsHighPriority;
+    private TextView textCreateDate;
+    private TextView textDueDate;
+    private TextView textEndDate;
+    private ListView listViewAttachments;
+    private AttachmentsListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +52,33 @@ public class ToDoItemDetailsActivity extends AppCompatActivity {
     private void bindIds() {
         textIsDone = findViewById(R.id.text_is_done);
         textName = findViewById(R.id.text_name);
+        textIsHighPriority = findViewById(R.id.text_is_high_priority);
+        textCreateDate = findViewById(R.id.text_create_date);
+        textDueDate = findViewById(R.id.text_due_date);
+        textEndDate = findViewById(R.id.text_end_date);
+        listViewAttachments = findViewById(R.id.list_attachments);
+
     }
 
     private void setUI() {
         toDoItem = ToDoMainActivity.toDoItemsViewModel.getToDoItemById(toDoItemId);
         textIsDone.setText(String.format(getString(R.string.is_done), toDoItem.isDone() ? getString(R.string.yes) : getString(R.string.no)));
         textName.setText(String.format(getString(R.string.name), toDoItem.getName()));
+        textIsHighPriority.setText(String.format(getString(R.string.is_high_priority), toDoItem.isHighPriority() ? getString(R.string.yes) : getString(R.string.no)));
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTimeInMillis(toDoItem.getCreateDateMillis());
+        textCreateDate.setText(String.format(getString(R.string.details_create_date), new SimpleDateFormat(Constants.DATE_FORMAT, Locale.getDefault()).format(calendar.getTime())));
+        calendar.setTimeInMillis(toDoItem.getDueDateMillis());
+        textDueDate.setText(String.format(getString(R.string.details_due_date), new SimpleDateFormat(Constants.DATE_FORMAT, Locale.getDefault()).format(calendar.getTime())));
+        if(toDoItem.isDone()){
+            calendar.setTimeInMillis(toDoItem.getEndDateMillis());
+            textEndDate.setText(String.format(getString(R.string.details_end_date), new SimpleDateFormat(Constants.DATE_FORMAT, Locale.getDefault()).format(calendar.getTime())));
+        } else {
+            textEndDate.setText(String.format(getString(R.string.details_end_date), "(Brak)"));
+        }
+        adapter = new AttachmentsListAdapter(this, R.layout.layout_to_do_attachment, toDoItem.getAttachments(), false);
+        listViewAttachments.setAdapter(adapter);
+
     }
 
     @Override

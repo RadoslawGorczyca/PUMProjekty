@@ -16,9 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,11 +34,13 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 public class ToDoMainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static ToDoItemsViewModel toDoItemsViewModel;
+    private List<ToDoItem> toDoItemList;
     private RecyclerView recyclerToDoItems;
     private ToDoRecycleAdapter toDoItemArrayAdapter;
     private TextView textNoItems;
@@ -48,9 +52,9 @@ public class ToDoMainActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project_end_to_do_main);
         setTitle(R.string.to_do_list);
-        initData();
         bindIds();
         setUI();
+        initData(Constants.SORTING_METHOD.STATUS);
         setListeners();
         setAlarm();
     }
@@ -95,12 +99,33 @@ public class ToDoMainActivity extends AppCompatActivity implements View.OnClickL
         startActivity(intent);
     }
 
-    private void initData() {
+    private void initData(Constants.SORTING_METHOD method) {
         toDoItemsViewModel = ViewModelProviders.of(this).get(ToDoItemsViewModel.class);
-        toDoItemsViewModel.getToDoItemsList().observe(this, toDoItems -> {
-            toDoItemArrayAdapter.setToDoItemsList(toDoItems);
-            showOrHideTextNoItem();
-        });
+        toDoItemArrayAdapter = new ToDoRecycleAdapter(this);
+        recyclerToDoItems.setAdapter(toDoItemArrayAdapter);
+
+        switch (method){
+            case CREATE_DATE:
+                toDoItemList = toDoItemsViewModel.getToDoItemsListOrderByCreateDate();
+                break;
+            case END_DATE:
+                toDoItemList = toDoItemsViewModel.getToDoItemsListOrderByEndDate();
+                break;
+            case PRIORITY:
+                toDoItemList = toDoItemsViewModel.getToDoItemsListOrderByPriority();
+                break;
+            case NAME:
+                toDoItemList = toDoItemsViewModel.getToDoItemsListOrderByName();
+                break;
+            case STATUS:
+                toDoItemList = toDoItemsViewModel.getToDoItemsListOrderByStatus();
+                break;
+            default:
+                toDoItemList = toDoItemsViewModel.getToDoItemsList();
+        }
+
+        toDoItemArrayAdapter.setToDoItemsList(toDoItemList);
+        showOrHideTextNoItem();
     }
 
     private void saveToDoItemsToFile() {
@@ -134,18 +159,17 @@ public class ToDoMainActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void showOrHideTextNoItem() {
-        if (toDoItemsViewModel.getToDoItemsList().getValue() != null) {
-            textNoItems.setVisibility(toDoItemsViewModel.getToDoItemsList().getValue().size() > 0 ? View.GONE : View.VISIBLE);
+        if (toDoItemsViewModel.getToDoItemsList() != null) {
+            textNoItems.setVisibility(toDoItemsViewModel.getToDoItemsList().size() > 0 ? View.GONE : View.VISIBLE);
         } else {
             textNoItems.setVisibility(View.VISIBLE);
         }
     }
 
     private String toDoItemsToString() {
-        List<ToDoItem> toDoItems = toDoItemsViewModel.getToDoItemsList().getValue();
         StringBuilder stringBuilder = new StringBuilder();
-        if (toDoItems != null && toDoItems.size() > 0) {
-            for (ToDoItem item : toDoItems) {
+        if (toDoItemList != null && toDoItemList.size() > 0) {
+            for (ToDoItem item : toDoItemList) {
                 stringBuilder.append("Nazwa: ").append(item.getName()).append("\n");
                 stringBuilder.append("Zakończone: ").append(item.isDone() ? "Tak" : "Nie").append("\n");
                 stringBuilder.append("Wysoki priorytet: ").append(item.isHighPriority() ? "Tak" : "Nie").append("\n");
@@ -166,7 +190,7 @@ public class ToDoMainActivity extends AppCompatActivity implements View.OnClickL
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_sort:
-                openSortingPopUpMenu((View) item);
+                openSortingPopUpMenu();
                 return true;
             case R.id.action_save_to_file:
                 saveToDoItemsToFile();
@@ -176,20 +200,26 @@ public class ToDoMainActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    private void openSortingPopUpMenu(View menuItem) {
-        PopupMenu popupMenu = new PopupMenu(this, menuItem);
+    private void openSortingPopUpMenu() {
+        View view = findViewById(R.id.action_sort);
+        PopupMenu popupMenu = new PopupMenu(this, view);
         popupMenu.getMenuInflater().inflate(R.menu.menu_project_end_to_do_sort_options_pop_up, popupMenu.getMenu());
         popupMenu.setOnMenuItemClickListener(item -> {
             switch (item.getItemId()){
                 case R.id.action_sort_by_create_date:
+                    sortList(Constants.SORTING_METHOD.CREATE_DATE);
                     return true;
                 case R.id.action_sort_by_end_date:
+                    sortList(Constants.SORTING_METHOD.END_DATE);
                     return true;
                 case R.id.action_sort_by_priority:
+                    sortList(Constants.SORTING_METHOD.PRIORITY);
                     return true;
                 case R.id.action_sort_by_name:
+                    sortList(Constants.SORTING_METHOD.NAME);
                     return true;
                 case R.id.action_sort_by_status:
+                    sortList(Constants.SORTING_METHOD.STATUS);
                     return true;
                 default:
                     return false;
@@ -198,8 +228,36 @@ public class ToDoMainActivity extends AppCompatActivity implements View.OnClickL
         popupMenu.show();
     }
 
+    private void sortList(Constants.SORTING_METHOD method){
+        if(toDoItemsViewModel.getToDoItemsList() != null) {
+            switch (method) {
+                case CREATE_DATE:
+                    initData(Constants.SORTING_METHOD.CREATE_DATE);
+                    break;
+                case END_DATE:
+                    initData(Constants.SORTING_METHOD.END_DATE);
+                    break;
+                case PRIORITY:
+                    initData(Constants.SORTING_METHOD.PRIORITY);
+                    break;
+                case NAME:
+                    initData(Constants.SORTING_METHOD.NAME);
+                    break;
+                case STATUS:
+                    initData(Constants.SORTING_METHOD.STATUS);
+                    break;
+            }
+        }
+    }
+
     @Override
     public void onClick(View v) {
         addToDoItem();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initData(Constants.SORTING_METHOD.STATUS);
     }
 }

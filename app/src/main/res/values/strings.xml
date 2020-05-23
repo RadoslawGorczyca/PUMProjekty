@@ -132,6 +132,7 @@
     <string name="error_fields_cannot_be_empty">Pole nie może być puste</string>
     <string name="to_do_item_details">Szczegóły zadania</string>
     <string name="is_done">Zakończone: %1$s</string>
+    <string name="is_high_priority">Priorytetowe: %1$s</string>
     <string name="name">Nazwa: %1$s</string>
     <string name="edit">Edytuj</string>
     <string name="delete">Usuń</string>
@@ -149,6 +150,18 @@
     <string name="priority">Priorytet</string>
     <string name="sort_name">Nazwa</string>
     <string name="status">Status</string>
+    <string name="video">Film</string>
+    <string name="image">Zdjęcie</string>
+    <string name="attachment">Dodaj załącznik</string>
+    <string name="add_image">Dodaj zdjęcie</string>
+    <string name="from_gallery_or_from_camera">Z galerii czy bezpośrednio z aparatu?</string>
+    <string name="gallery">Galeria</string>
+    <string name="camera">Aparat</string>
+    <string name="add_video">Dodaj film</string>
+    <string name="attachments">Załączniki:</string>
+    <string name="details_create_date">Data utworzenia: %1$s</string>
+    <string name="details_due_date">Termin: %1$s</string>
+    <string name="details_end_date">Data zakończenia: %1$s</string>
 
     <string-array name="countries_array">
         <item>Polska</item>

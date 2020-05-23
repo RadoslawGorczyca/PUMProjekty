@@ -25,7 +25,7 @@ public class AlarmReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         ToDoItemDao toDoItemDao = ToDoItemsDatabase.getDatabase(context).toDoItemDao();
-        List<ToDoItem> toDoItemList = toDoItemDao.getAllToDoItems().getValue();
+        List<ToDoItem> toDoItemList = toDoItemDao.getAllToDoItems();
         if(toDoItemList != null && toDoItemList.size() > 0){
             StringBuilder toDoItemsStringBuilder = new StringBuilder();
             Calendar calendarToday = Calendar.getInstance();
@@ -37,45 +37,50 @@ public class AlarmReceiver extends BroadcastReceiver {
                 boolean toDoTaskLate = calendarToday.after(calendarToDoItem);
                 boolean isDone = item.isDone();
                 if((sameDay || toDoTaskLate) && !isDone){
-                    toDoItemsStringBuilder.append(item.getName()).append("\n");
+                    if(toDoItemsStringBuilder.length() != 0){
+                        toDoItemsStringBuilder.append(", ");
+                    }
+                    toDoItemsStringBuilder.append(item.getName());
                 }
             }
+            if(!toDoItemsStringBuilder.toString().isEmpty()) {
 
-            String message = "Dzisiejsze lub zaległe zadania:\n" + toDoItemsStringBuilder.toString();
+                String message = "Dzisiejsze lub zaległe zadania:\n" + toDoItemsStringBuilder.toString();
 
-            NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+                NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
 
-            int notificationId = 1;
-            String channelId = "channel-01";
-            String channelName = context.getString(R.string.to_do_list);
-            int importance = 0;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-                importance = NotificationManager.IMPORTANCE_HIGH;
-            }
+                int notificationId = 1;
+                String channelId = "channel-01";
+                String channelName = context.getString(R.string.to_do_list);
+                int importance = 0;
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                    importance = NotificationManager.IMPORTANCE_HIGH;
+                }
 
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                NotificationChannel mChannel = new NotificationChannel(
-                        channelId, channelName, importance);
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                    NotificationChannel mChannel = new NotificationChannel(
+                            channelId, channelName, importance);
+                    if (notificationManager != null) {
+                        notificationManager.createNotificationChannel(mChannel);
+                    }
+                }
+
+                NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, channelId)
+                        .setSmallIcon(R.mipmap.ic_launcher)
+                        .setContentTitle(context.getString(R.string.to_do_list))
+                        .setContentText(message);
+
+                TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
+                stackBuilder.addNextIntent(intent);
+                PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(
+                        0,
+                        PendingIntent.FLAG_UPDATE_CURRENT
+                );
+                mBuilder.setContentIntent(resultPendingIntent);
+
                 if (notificationManager != null) {
-                    notificationManager.createNotificationChannel(mChannel);
+                    notificationManager.notify(notificationId, mBuilder.build());
                 }
-            }
-
-            NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context, channelId)
-                    .setSmallIcon(R.mipmap.ic_launcher)
-                    .setContentTitle(context.getString(R.string.to_do_list))
-                    .setContentText(message);
-
-            TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-            stackBuilder.addNextIntent(intent);
-            PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(
-                    0,
-                    PendingIntent.FLAG_UPDATE_CURRENT
-            );
-            mBuilder.setContentIntent(resultPendingIntent);
-
-            if (notificationManager != null) {
-                notificationManager.notify(notificationId, mBuilder.build());
             }
         }
     }

@@ -7,21 +7,78 @@
     tools:context=".projectEnd.ToDoItemDetailsActivity">
 
     <TextView
-        android:id="@+id/text_is_done"
+        android:id="@+id/text_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/is_done"
+        android:text="@string/name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="8dp"/>
 
     <TextView
-        android:id="@+id/text_name"
+        android:id="@+id/text_is_done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/name"
+        android:text="@string/is_done"
+        app:layout_constraintTop_toBottomOf="@id/text_name"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/text_is_high_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/is_high_priority"
         app:layout_constraintTop_toBottomOf="@id/text_is_done"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/text_create_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_create_date"
+        app:layout_constraintTop_toBottomOf="@id/text_is_high_priority"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/text_due_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_due_date"
+        app:layout_constraintTop_toBottomOf="@id/text_create_date"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/text_end_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/details_end_date"
+        app:layout_constraintTop_toBottomOf="@id/text_due_date"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/label_attachments"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_end_date"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/attachments"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ListView
+        android:id="@+id/list_attachments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_attachments" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,7 +18,22 @@ import java.util.List;
 @Dao
 public interface ToDoItemDao {
     @Query("SELECT * FROM todoitem")
-    LiveData<List<ToDoItem>> getAllToDoItems();
+    List<ToDoItem> getAllToDoItems();
+
+    @Query("SELECT * FROM todoitem ORDER BY createDateMillis DESC")
+    List<ToDoItem> getAllToDoItemsOrderByCreateDate();
+
+    @Query("SELECT * FROM todoitem ORDER BY endDateMillis DESC")
+    List<ToDoItem> getAllToDoItemsOrderByEndDate();
+
+    @Query("SELECT * FROM todoitem ORDER BY isHighPriority DESC")
+    List<ToDoItem> getAllToDoItemsOrderByPriority();
+
+    @Query("SELECT * FROM todoitem ORDER BY name ASC")
+    List<ToDoItem> getAllToDoItemsOrderByName();
+
+    @Query("SELECT * FROM todoitem ORDER BY isDone ASC")
+    List<ToDoItem> getAllToDoItemsOrderByStatus();
 
     @Query("SELECT * FROM todoitem WHERE uid = :id LIMIT 1")
     ToDoItem findToDoItemById(String id);

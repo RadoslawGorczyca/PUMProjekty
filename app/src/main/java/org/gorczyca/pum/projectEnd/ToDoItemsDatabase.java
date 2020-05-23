@@ -7,13 +7,17 @@ import androidx.annotation.NonNull;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 import androidx.sqlite.db.SupportSQLiteDatabase;
+
+import org.gorczyca.pum.utils.Converters;
 
 /**
  * Created by: Radosław Gorczyca
  * 23.05.2020 10:19
  */
-@Database(entities = {ToDoItem.class}, version = 3)
+@Database(entities = {ToDoItem.class}, version = 5)
+@TypeConverters(Converters.class)
 public abstract class ToDoItemsDatabase extends RoomDatabase {
 
     private static final String DB_NAME = "toDoItems.db";

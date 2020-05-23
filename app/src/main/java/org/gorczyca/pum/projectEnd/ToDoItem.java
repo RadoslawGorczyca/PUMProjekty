@@ -5,8 +5,10 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Comparator;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -39,6 +41,9 @@ class ToDoItem {
 
     @ColumnInfo(name = "dueDateMillis")
     private long dueDateMillis;
+
+    @ColumnInfo(name = "attachments")
+    private List<String> attachments;
 
 
 
@@ -108,6 +113,13 @@ class ToDoItem {
         this.dueDateMillis = dueDateMillis;
     }
 
+    public List<String> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<String> attachments) {
+        this.attachments = attachments;
+    }
 
     public static Comparator<ToDoItem> ToDoItemCreateDateComparator = (o1, o2) -> {
         Calendar toDoItemCreateDate1 = Calendar.getInstance();

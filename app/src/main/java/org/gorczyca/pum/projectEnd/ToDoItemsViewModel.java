@@ -4,7 +4,6 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
@@ -14,13 +13,38 @@ import java.util.List;
  */
 public class ToDoItemsViewModel extends AndroidViewModel {
     private ToDoItemDao toDoItemDao;
-    private LiveData<List<ToDoItem>> toDoItemsLiveData;
+    private List<ToDoItem> toDoItemsLiveData;
     public ToDoItemsViewModel(@NonNull Application application) {
         super(application);
         toDoItemDao = ToDoItemsDatabase.getDatabase(application).toDoItemDao();
         toDoItemsLiveData = toDoItemDao.getAllToDoItems();
     }
-    public LiveData<List<ToDoItem>> getToDoItemsList() {
+    public List<ToDoItem> getToDoItemsList() {
+        return toDoItemsLiveData;
+    }
+
+    public List<ToDoItem> getToDoItemsListOrderByCreateDate(){
+        toDoItemsLiveData = toDoItemDao.getAllToDoItemsOrderByCreateDate();
+        return toDoItemsLiveData;
+    }
+
+    public List<ToDoItem> getToDoItemsListOrderByEndDate(){
+        toDoItemsLiveData = toDoItemDao.getAllToDoItemsOrderByEndDate();
+        return toDoItemsLiveData;
+    }
+
+    public List<ToDoItem> getToDoItemsListOrderByPriority(){
+        toDoItemsLiveData = toDoItemDao.getAllToDoItemsOrderByPriority();
+        return toDoItemsLiveData;
+    }
+
+    public List<ToDoItem> getToDoItemsListOrderByName(){
+        toDoItemsLiveData = toDoItemDao.getAllToDoItemsOrderByName();
+        return toDoItemsLiveData;
+    }
+
+    public List<ToDoItem> getToDoItemsListOrderByStatus(){
+        toDoItemsLiveData = toDoItemDao.getAllToDoItemsOrderByStatus();
         return toDoItemsLiveData;
     }
 

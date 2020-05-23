@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.gorczyca.pum.R;
 import org.gorczyca.pum.utils.Constants;
 
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -66,12 +67,15 @@ public class ToDoRecycleAdapter extends RecyclerView.Adapter<ToDoRecycleAdapter.
 
             holder.isDone.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 toDoItem.setDone(isChecked);
-                ToDoMainActivity.toDoItemsViewModel.update(toDoItem);
                 if(toDoItem.isDone()){
                     holder.name.setPaintFlags(holder.name.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    Calendar calendar = Calendar.getInstance();
+                    toDoItem.setEndDateMillis(calendar.getTimeInMillis());
                 } else {
                     holder.name.setPaintFlags(holder.name.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
+                    toDoItem.setEndDateMillis(0);
                 }
+                ToDoMainActivity.toDoItemsViewModel.update(toDoItem);
             });
             holder.buttonOptions.setOnClickListener(v -> {
                 PopupMenu popupMenu = new PopupMenu(context, holder.buttonOptions);
