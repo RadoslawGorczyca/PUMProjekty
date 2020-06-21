@@ -57,7 +57,7 @@ public class MenuMainPageActivity extends AppCompatActivity implements View.OnCl
             //TODO Podepnij OnClick po ukonczeniu projektu 4
         } else if (v.getId() == buttonProjectDialogsIntentions.getId()) {
             //TODO Podepnij OnClick po ukonczeniu projektu 5
-        } else if (v.getId() == buttonProjectEnd.getId()) {
+        } else if (v.getId() == buttonProjectFinal.getId()) {
             startActivity(new Intent(MenuMainPageActivity.this, ToDoMainActivity.class));
         }
     }

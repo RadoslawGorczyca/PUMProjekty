@@ -156,7 +156,7 @@ public class TextToSpeechActivity extends AppCompatActivity implements TextToSpe
             }
             File textFile = new File(file, "text.txt");
             FileWriter writer = new FileWriter(textFile);
-            writer.append("Hi!\nThis file was created to test out the file reading capability of Radek's app.\nI hope it still does work for you as well, professor!\nHave a nice day!");
+            writer.append("Hi!\nThis file was created to test out the file reading capability of Radek's app.\nI hope it still does work for you as well, professor!\nHave a nice day! :)");
             Log.d("TTS", textFile.getAbsolutePath());
             writer.flush();
             writer.close();

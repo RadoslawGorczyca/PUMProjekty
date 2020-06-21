@@ -162,7 +162,6 @@
     <string name="details_create_date">Data utworzenia: %1$s</string>
     <string name="details_due_date">Termin: %1$s</string>
     <string name="details_end_date">Data zakończenia: %1$s</string>
-    <string name="gallery">Galeria</string>
     <string name="text_to_speech">Text-To-Speech</string>
     <string name="load_file">Załaduj plik</string>
     <string name="read">Czytaj</string>
