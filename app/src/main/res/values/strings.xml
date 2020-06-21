@@ -162,6 +162,16 @@
     <string name="details_create_date">Data utworzenia: %1$s</string>
     <string name="details_due_date">Termin: %1$s</string>
     <string name="details_end_date">Data zakończenia: %1$s</string>
+    <string name="gallery">Galeria</string>
+    <string name="text_to_speech">Text-To-Speech</string>
+    <string name="load_file">Załaduj plik</string>
+    <string name="read">Czytaj</string>
+    <string name="text_to_read">Wpisz tekst do przeczytania...</string>
+    <string name="read_from_file">Wczytaj z pliku</string>
+    <string name="dialog_message_read_text_from_file">Wpisane dane zostaną utracone.\nChcesz wczytać tekst z pliku?</string>
+    <string name="TTS_language_not_supported">Text-To-Speech: Język nieobsługiwany!</string>
+    <string name="TTS_initialization_failed">Text-To-Speech: Błąd inicjalizacji!</string>
+    <string name="error_failed_to_create_dummy_file">Nieudane utworzenie pliku z tekstem!</string>
 
     <string-array name="countries_array">
         <item>Polska</item>

@@ -17,7 +17,7 @@ public class MenuMainPageActivity extends AppCompatActivity implements View.OnCl
     private Button buttonProjectFilesPhotosTTS;
     private Button buttonProjectWebView;
     private Button buttonProjectDialogsIntentions;
-    private Button buttonProjectEnd;
+    private Button buttonProjectFinal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MenuMainPageActivity extends AppCompatActivity implements View.OnCl
         buttonProjectFilesPhotosTTS = findViewById(R.id.button_project_files_photos_and_TTS);
         buttonProjectWebView = findViewById(R.id.button_project_web_view);
         buttonProjectDialogsIntentions = findViewById(R.id.button_project_dialogs_and_intents);
-        buttonProjectEnd = findViewById(R.id.button_project_end);
+        buttonProjectFinal = findViewById(R.id.button_project_final);
     }
 
     private void setOnClickListeners() {
@@ -42,7 +42,7 @@ public class MenuMainPageActivity extends AppCompatActivity implements View.OnCl
         buttonProjectFilesPhotosTTS.setOnClickListener(this);
         buttonProjectWebView.setOnClickListener(this);
         buttonProjectDialogsIntentions.setOnClickListener(this);
-        buttonProjectEnd.setOnClickListener(this);
+        buttonProjectFinal.setOnClickListener(this);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class MenuMainPageActivity extends AppCompatActivity implements View.OnCl
         } else if (v.getId() == buttonProjectGUI.getId()) {
             startActivity(new Intent(MenuMainPageActivity.this, MenuProject2Activity.class));
         } else if (v.getId() == buttonProjectFilesPhotosTTS.getId()) {
-            //TODO Podepnij OnClick po ukonczeniu projektu 3
+            startActivity(new Intent(MenuMainPageActivity.this, MenuProject3Activity.class));
         } else if (v.getId() == buttonProjectWebView.getId()) {
             //TODO Podepnij OnClick po ukonczeniu projektu 4
         } else if (v.getId() == buttonProjectDialogsIntentions.getId()) {

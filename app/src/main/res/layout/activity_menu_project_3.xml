@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="org.gorczyca.pum.menu.MenuMainPageActivity">
+    tools:context=".menu.MenuProject1Activity">
 
     <TextView
         android:id="@+id/project_label"
@@ -14,7 +14,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:gravity="center_horizontal"
-        android:text="@string/project_introduction"
+        android:text="@string/project_files_photos_and_TTS"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -28,7 +28,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:gravity="center_horizontal"
-        android:text="@string/project_group"
+        android:text="@string/project_label2"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -59,61 +59,22 @@
         app:layout_constraintTop_toBottomOf="@id/author">
 
         <Button
-            android:id="@+id/button_project_introduction"
+            android:id="@+id/button_task_gallery"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
-            android:enabled="true"
-            android:text="@string/introduction_to_android"
-            android:textColor="@android:color/white" />
+            android:layout_weight="1"
+            android:text="@string/gallery"
+            android:textColor="@android:color/white"/>
 
         <Button
-            android:id="@+id/button_project_GUI"
+            android:id="@+id/button_task_text_to_speech"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:backgroundTint="@color/colorAccent"
-            android:text="@string/project_GUI"
-            android:textColor="@android:color/white" />
-
-        <Button
-            android:id="@+id/button_project_files_photos_and_TTS"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/colorAccent"
-            android:text="@string/project_files_photos_and_TTS"
-            android:textColor="@android:color/white" />
-
-        <!--TODO Odblokuj projekt 4 po ukończeniu-->
-        <Button
-            android:id="@+id/button_project_web_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:enabled="false"
-            android:text="@string/project_web_view"
-            android:textColor="@android:color/white" />
-
-        <!--TODO Odblokuj projekt 5 po ukończeniu-->
-        <Button
-            android:id="@+id/button_project_dialogs_and_intents"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:enabled="false"
-            android:text="@string/project_dialogs_and_intents"
-            android:textColor="@android:color/white" />
-
-        <Button
-            android:id="@+id/button_project_final"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1.5"
-            android:backgroundTint="@color/colorAccent"
-            android:text="@string/project_end"
-            android:textColor="@android:color/white" />
+            android:text="@string/text_to_speech"
+            android:textColor="@android:color/white"/>
 
     </LinearLayout>
 
