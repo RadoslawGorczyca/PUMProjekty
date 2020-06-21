@@ -3,7 +3,6 @@ package org.gorczyca.pum.project3;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.os.Environment;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.Menu;
@@ -23,10 +22,10 @@ import org.gorczyca.pum.R;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Locale;
 
@@ -89,24 +88,23 @@ public class TextToSpeechActivity extends AppCompatActivity implements TextToSpe
             String ret = "";
 
             try {
-                InputStream inputStream = openFileInput(
-                        Environment.getExternalStorageDirectory() + File.separator +
-                                "project3tts" + File.separator +
-                                "ttsDummyFile.txt");
 
-                if (inputStream != null) {
-                    InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                    BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                    String receiveString;
-                    StringBuilder stringBuilder = new StringBuilder();
+                InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(new File(getFilesDir() + File.separator + "tts", "text.txt")));
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String receiveString;
+                StringBuilder stringBuilder = new StringBuilder();
 
-                    while ((receiveString = bufferedReader.readLine()) != null) {
-                        stringBuilder.append("\n").append(receiveString);
+                receiveString = bufferedReader.readLine();
+                while (receiveString != null) {
+                    stringBuilder.append(receiveString);
+                    receiveString = bufferedReader.readLine();
+                    if(receiveString != null){
+                        stringBuilder.append("\n");
                     }
-
-                    inputStream.close();
-                    ret = stringBuilder.toString();
                 }
+
+                inputStreamReader.close();
+                ret = stringBuilder.toString();
             } catch (FileNotFoundException e) {
                 Log.e("tts", "File not found: " + e.toString());
             } catch (IOException e) {
@@ -151,13 +149,15 @@ public class TextToSpeechActivity extends AppCompatActivity implements TextToSpe
 
     private void createDummyTextFile() {
         try {
-            File file = new File(Environment.getExternalStorageDirectory() + "/project3tts.txt");
+            File file = new File(getFilesDir() + File.separator + "tts");
 
             if (!file.exists()) {
-                file.createNewFile();
+                file.mkdir();
             }
-            FileWriter writer = new FileWriter(file);
-            writer.append("test");
+            File textFile = new File(file, "text.txt");
+            FileWriter writer = new FileWriter(textFile);
+            writer.append("Hi!\nThis file was created to test out the file reading capability of Radek's app.\nI hope it still does work for you as well, professor!\nHave a nice day!");
+            Log.d("TTS", textFile.getAbsolutePath());
             writer.flush();
             writer.close();
             isDummyFileCreated = true;
