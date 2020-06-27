@@ -34,6 +34,7 @@ public class CameraAndGalleryActivity extends AppCompatActivity implements View.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_project_5_camera_and_gallery);
+        setTitle(R.string.camera_and_gallery);
         bindIds();
         bindListeners();
     }
