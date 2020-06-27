@@ -29,9 +29,9 @@ Zadania:
 
 # 3. Pliki, zdjęcia i mechanizm TTS
 
-- Status: Wysłane
-- Ocena: -
-- Uwagi: -
+- Status: Ocenione
+- Ocena: 100/100
+- Uwagi: brak
 
 Zadania:
   - [x] Galeria zdjęć
@@ -39,24 +39,24 @@ Zadania:
 
 # 4. Wykorzystanie WebView
 
-- Status: Nie zaczęte
+- Status: Wysłane
 - Ocena: -
 - Uwagi: -
 
 Zadania:
-  - [ ] Gra "Znajdź pary"
-  - [ ] Ciekawe miejsce
-  - [ ] Książka adresowa
+  - [x] Gra "Znajdź pary"
+  - [x] Ciekawe miejsce
+  - [x] Książka adresowa
 
 # 5. Dialogi i mechanizm intencji
 
-- Status: Nie zaczęte
+- Status: Wysłane
 - Ocena: -
 - Uwagi: -
 
 Zadania:
-  - [ ] Nauka języka angielskiego
-  - [ ] Notatki
+  - [x] Nauka języka angielskiego
+  - [x] Aparat i galeria
 
 # 6. Projekt zaliczeniowy
 
