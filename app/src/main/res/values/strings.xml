@@ -190,6 +190,15 @@
     <string name="next">Następne</string>
     <string name="end_test_confirmation_message">Czy na pewno chcesz zakończyć test?</string>
     <string name="go_back">Powrót</string>
+    <string name="find_pairs">Znajdź pary</string>
+    <string name="interesting_places">Ciekawe miejsca</string>
+    <string name="contact_book">Książka adresowa</string>
+    <string name="additional_info">Informacje</string>
+    <string name="show_on_map">Mapa</string>
+    <string name="lalamido">Lalamido</string>
+    <string name="wnsit">WNŚiT</string>
+    <string name="ds2">DS2</string>
+    <string name="remedium">Remedium</string>
 
     <string-array name="countries_array">
         <item>Polska</item>

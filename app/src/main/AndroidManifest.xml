@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.maps"/>
 
     <application
         android:allowBackup="true"
@@ -91,6 +93,22 @@
             android:parentActivityName=".projectEnd.ToDoMainActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".menu.MenuProject4Activity"
+            android:parentActivityName=".menu.MenuMainPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project4.ContactBookActivity"
+            android:parentActivityName=".menu.MenuProject4Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project4.InterestingPlacesActivity"
+            android:parentActivityName=".menu.MenuProject4Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project4.FindPairsActivity"
+            android:parentActivityName=".menu.MenuProject4Activity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".menu.MenuProject5Activity"
             android:parentActivityName=".menu.MenuMainPageActivity"
             android:screenOrientation="portrait" />
@@ -102,9 +120,11 @@
             android:name=".project5.EnglishLessonMainActivity"
             android:parentActivityName=".menu.MenuProject5Activity"
             android:screenOrientation="portrait" />
-        <activity android:name=".project5.EnglishLessonResultsActivity"
+        <activity
+            android:name=".project5.EnglishLessonResultsActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".project5.EnglishLessonTestActivity"
+        <activity
+            android:name=".project5.EnglishLessonTestActivity"
             android:screenOrientation="portrait"/>
 
         <provider
