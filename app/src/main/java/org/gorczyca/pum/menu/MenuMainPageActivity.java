@@ -54,7 +54,7 @@ public class MenuMainPageActivity extends AppCompatActivity implements View.OnCl
         } else if (v.getId() == buttonProjectFilesPhotosTTS.getId()) {
             startActivity(new Intent(MenuMainPageActivity.this, MenuProject3Activity.class));
         } else if (v.getId() == buttonProjectWebView.getId()) {
-            //TODO Podepnij OnClick po ukonczeniu projektu 4
+            startActivity(new Intent(MenuMainPageActivity.this, MenuProject4Activity.class));
         } else if (v.getId() == buttonProjectDialogsIntentions.getId()) {
             //TODO Podepnij OnClick po ukonczeniu projektu 5
         } else if (v.getId() == buttonProjectFinal.getId()) {

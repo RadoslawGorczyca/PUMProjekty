@@ -4,8 +4,8 @@
     package="org.gorczyca.pum">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -90,6 +90,22 @@
             android:name=".projectEnd.ToDoAddOrEditActivity"
             android:parentActivityName=".projectEnd.ToDoMainActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".menu.MenuProject4Activity"
+            android:parentActivityName=".menu.MenuMainPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project4.ContactBookActivity"
+            android:parentActivityName=".menu.MenuProject4Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project4.InterestingPlacesActivity"
+            android:parentActivityName=".menu.MenuProject4Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project4.FindPairsActivity"
+            android:parentActivityName=".menu.MenuProject4Activity"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name=".utils.GenericFileProvider"
@@ -98,17 +114,19 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
+                android:resource="@xml/provider_paths" />
         </provider>
+
         <receiver android:name=".projectEnd.AlarmReceiver">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".projectEnd.DeviceBootReceiver"
+        <receiver
+            android:name=".projectEnd.DeviceBootReceiver"
             android:enabled="false">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
     </application>

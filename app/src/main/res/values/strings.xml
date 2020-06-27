@@ -171,6 +171,9 @@
     <string name="TTS_language_not_supported">Text-To-Speech: Język nieobsługiwany!</string>
     <string name="TTS_initialization_failed">Text-To-Speech: Błąd inicjalizacji!</string>
     <string name="error_failed_to_create_dummy_file">Nieudane utworzenie pliku z tekstem!</string>
+    <string name="find_pairs">Znajdź pary</string>
+    <string name="interesting_places">Ciekawe miejsca</string>
+    <string name="contact_book">Książka adresowa</string>
 
     <string-array name="countries_array">
         <item>Polska</item>
