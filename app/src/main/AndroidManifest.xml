@@ -102,7 +102,7 @@
 
         <provider
             android:name=".utils.GenericFileProvider"
-            android:authorities="${applicationId}.provider"
+            android:authorities="org.gorczyca.pum.provider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

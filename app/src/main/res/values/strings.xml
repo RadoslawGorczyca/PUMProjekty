@@ -173,6 +173,9 @@
     <string name="error_failed_to_create_dummy_file">Nieudane utworzenie pliku z tekstem!</string>
     <string name="english_lesson">Nauka angielskiego</string>
     <string name="camera_and_gallery">Aparat i galeria</string>
+    <string name="open_camera">Otwórz aparat</string>
+    <string name="open_gallery">Otwórz galerię</string>
+    <string name="cant_open_gallery">Brak aplikacji umożliwiającej wykonanie akcji</string>
 
     <string-array name="countries_array">
         <item>Polska</item>
