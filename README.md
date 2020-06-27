@@ -39,9 +39,9 @@ Zadania:
 
 # 4. Wykorzystanie WebView
 
-- Status: Wysłane
-- Ocena: -
-- Uwagi: -
+- Status: Ocenione
+- Ocena: 90/100
+- Uwagi: W przypadku zadania z kontaktami jest problem z referencją do obiektu pośredniczącego, ale ogólnie potwierdził Pan wysoki poziom implementacji. 
 
 Zadania:
   - [x] Gra "Znajdź pary"
