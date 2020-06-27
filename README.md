@@ -29,13 +29,13 @@ Zadania:
 
 # 3. Pliki, zdjęcia i mechanizm TTS
 
-- Status: W przygotowaniu
+- Status: Wysłane
 - Ocena: -
 - Uwagi: -
 
 Zadania:
-  - [ ] Galeria zdjęć
-  - [ ] Text-to-Speech
+  - [x] Galeria zdjęć
+  - [x] Text-to-Speech
 
 # 4. Wykorzystanie WebView
 
