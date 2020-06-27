@@ -50,9 +50,9 @@ Zadania:
 
 # 5. Dialogi i mechanizm intencji
 
-- Status: Wysłane
-- Ocena: -
-- Uwagi: -
+- Status: Ocenione
+- Ocena: 100/100
+- Uwagi: brak
 
 Zadania:
   - [x] Nauka języka angielskiego
