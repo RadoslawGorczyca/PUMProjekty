@@ -90,14 +90,21 @@
             android:name=".projectEnd.ToDoAddOrEditActivity"
             android:parentActivityName=".projectEnd.ToDoMainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".menu.MenuProject5Activity"
+        <activity
+            android:name=".menu.MenuProject5Activity"
             android:parentActivityName=".menu.MenuMainPageActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".project5.CameraAndGalleryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project5.CameraAndGalleryActivity"
             android:parentActivityName=".menu.MenuProject5Activity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".project5.EnglishLessonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".project5.EnglishLessonMainActivity"
             android:parentActivityName=".menu.MenuProject5Activity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".project5.EnglishLessonResultsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".project5.EnglishLessonTestActivity"
             android:screenOrientation="portrait"/>
 
         <provider

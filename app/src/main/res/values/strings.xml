@@ -176,6 +176,20 @@
     <string name="open_camera">Otwórz aparat</string>
     <string name="open_gallery">Otwórz galerię</string>
     <string name="cant_open_gallery">Brak aplikacji umożliwiającej wykonanie akcji</string>
+    <string name="in_which_language_you_want_to_write_words">W jakim języku chcesz wpisywać słówka?</string>
+    <string name="in_english">Po angielsku</string>
+    <string name="in_polish">Po polsku</string>
+    <string name="which_mode">W jakim trybie?</string>
+    <string name="learning">Nauka</string>
+    <string name="test">Test</string>
+    <string name="start">Start</string>
+    <string name="about">O programie</string>
+    <string name="about_message">PUM - Projekty\nv. 1.0\nRadosław Gorczyca</string>
+    <string name="learning_finished">Ukończono naukę</string>
+    <string name="end_test">Zakończ test</string>
+    <string name="next">Następne</string>
+    <string name="end_test_confirmation_message">Czy na pewno chcesz zakończyć test?</string>
+    <string name="go_back">Powrót</string>
 
     <string-array name="countries_array">
         <item>Polska</item>

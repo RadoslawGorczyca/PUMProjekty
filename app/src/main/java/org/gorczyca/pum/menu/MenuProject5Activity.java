@@ -8,10 +8,8 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.gorczyca.pum.R;
-import org.gorczyca.pum.project3.GalleryActivity;
-import org.gorczyca.pum.project3.TextToSpeechActivity;
 import org.gorczyca.pum.project5.CameraAndGalleryActivity;
-import org.gorczyca.pum.project5.EnglishLessonActivity;
+import org.gorczyca.pum.project5.EnglishLessonMainActivity;
 
 public class MenuProject5Activity extends AppCompatActivity implements View.OnClickListener {
 
@@ -41,7 +39,7 @@ public class MenuProject5Activity extends AppCompatActivity implements View.OnCl
     @Override
     public void onClick(View v) {
         if (v.getId() == buttonTaskEnglishLesson.getId()) {
-            startActivity(new Intent(MenuProject5Activity.this, EnglishLessonActivity.class));
+            startActivity(new Intent(MenuProject5Activity.this, EnglishLessonMainActivity.class));
         } else if (v.getId() == buttonTaskCameraAndGallery.getId()) {
             startActivity(new Intent(MenuProject5Activity.this, CameraAndGalleryActivity.class));
         }
